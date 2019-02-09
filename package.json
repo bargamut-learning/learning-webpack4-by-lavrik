@@ -1,0 +1,8 @@
+{
+  "name": "try-webpack4-by-lavrik",
+  "version": "1.0.0",
+  "description": "First try Webpack4 by Dmitry Kavrik screencast",
+  "main": "index.js",
+  "author": "Paul Petrov <i.am@bargamut.ru>",
+  "license": "MIT"
+}
