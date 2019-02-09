@@ -4,5 +4,8 @@
   "description": "First try Webpack4 by Dmitry Kavrik screencast",
   "main": "index.js",
   "author": "Paul Petrov <i.am@bargamut.ru>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.29.3"
+  }
 }
