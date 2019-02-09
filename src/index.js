@@ -1,1 +1,3 @@
-console.log("Were is my code now?");
+import avg from './some';
+
+console.log(avg(1, 4, 8));
