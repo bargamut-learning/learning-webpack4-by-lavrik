@@ -25,7 +25,8 @@ let conf = {
 				// exclude: '/node_modules/'
 			}
 		]
-	}
+	},
+	devtool: 'eval-sourcemap'
 };
 
 module.exports = conf;
