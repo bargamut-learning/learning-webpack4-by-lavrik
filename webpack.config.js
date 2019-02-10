@@ -1,9 +1,6 @@
 let path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-console.log(process.env.NODE_ENV);
-
-
 // Create some object: this will be configuration of Webpack 4
 let conf = {
 	// Source entry point
@@ -51,7 +48,7 @@ let conf = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "style.css",
+      filename: "styles.css",
       chunkFilename: "[id].css"
     })
   ]
