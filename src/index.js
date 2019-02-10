@@ -1,5 +1,6 @@
 // import $ from 'jquery';
 import some from './some2';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 
 // $('.title').html('Some text!');

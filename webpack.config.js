@@ -1,4 +1,5 @@
 let path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // Create some object: this will be configuration of Webpack 4
 let conf = {
@@ -25,14 +26,17 @@ let conf = {
 				// exclude: '/node_modules/'
 			},
 			{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					'css-loader'
-				]
-			}
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      }
 		]
-	}
+	},
+  plugins: [
+    new ExtractTextPlugin("styles.css")
+  ]
 };
 
 // It can be a function
