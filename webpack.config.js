@@ -1,5 +1,8 @@
 let path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+console.log(process.env.NODE_ENV);
+
 
 // Create some object: this will be configuration of Webpack 4
 let conf = {
@@ -27,15 +30,30 @@ let conf = {
 			},
 			{
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
+        use: [
+					{
+						// This plugin should be used only on production builds
+						// without style-loader in the loaders chain, especially
+						// if you want to have HMR in development.
+						loader: MiniCssExtractPlugin.loader,
+						options: {
+							// you can specify a publicPath here
+							// by default it use publicPath in webpackOptions.output
+							publicPath: '../'
+						}
+					},
+					"css-loader"
+				]
       }
 		]
 	},
   plugins: [
-    new ExtractTextPlugin("styles.css")
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "style.css",
+      chunkFilename: "[id].css"
+    })
   ]
 };
 
