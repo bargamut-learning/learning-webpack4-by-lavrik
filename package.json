@@ -10,6 +10,10 @@
   "author": "Paul Petrov <i.am@bargamut.ru>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "path": "^0.12.7",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
