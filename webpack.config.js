@@ -11,6 +11,10 @@ let conf = {
 		filename: 'main.js',
 		// Public relative link to output file in browser for dev-server
 		publicPath: 'dist/'
+	},
+	devServer: {
+		// Show error compiling in browser
+		overlay: true
 	}
 };
 
