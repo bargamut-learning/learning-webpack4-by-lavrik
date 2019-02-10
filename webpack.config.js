@@ -25,8 +25,14 @@ let conf = {
 				// exclude: '/node_modules/'
 			}
 		]
-	},
-	devtool: 'eval-sourcemap'
+	}
 };
 
-module.exports = conf;
+// It can be a function
+module.exports = (env, options) => {
+	let isProduction = options.mode === 'production';
+
+	conf.devtool = isProduction ? 'source-map' : 'eval-sourcemap';
+
+	return conf;
+}
