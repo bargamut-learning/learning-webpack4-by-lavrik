@@ -8,7 +8,9 @@ let conf = {
 	output: {
 		// Must be absolute path; may be with __dirname, concatenation or you can use "path" module
 		path: path.resolve(__dirname, './dist'),
-		filename: 'main.js'
+		filename: 'main.js',
+		// Public relative link to output file in browser for dev-server
+		publicPath: 'dist/'
 	}
 };
 
