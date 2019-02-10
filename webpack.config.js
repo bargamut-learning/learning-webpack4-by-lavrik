@@ -32,7 +32,7 @@ let conf = {
 module.exports = (env, options) => {
 	let isProduction = options.mode === 'production';
 
-	conf.devtool = isProduction ? 'source-map' : 'eval-sourcemap';
+	conf.devtool = isProduction ? false : 'eval-sourcemap';
 
 	return conf;
 }
