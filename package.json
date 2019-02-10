@@ -4,12 +4,13 @@
   "description": "First try Webpack4 by Dmitry Kavrik screencast",
   "main": "index.js",
   "scripts": {
-		"dev": "webpack-dev-server --mode development --open",
+    "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "author": "Paul Petrov <i.am@bargamut.ru>",
   "license": "MIT",
   "devDependencies": {
+    "path": "^0.12.7",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
