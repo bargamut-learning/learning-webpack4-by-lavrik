@@ -15,6 +15,16 @@ let conf = {
 	devServer: {
 		// Show error compiling in browser
 		overlay: true
+	},
+	module: {
+		rules: [
+			// Make rule for transpiling js-files bu Babel
+			{
+				test: /\.js$/,
+				loader: 'babel-loader',
+				// exclude: '/node_modules/'
+			}
+		]
 	}
 };
 
